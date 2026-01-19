@@ -1,0 +1,15 @@
+# Binaries
+main
+my-rag-app
+*.exe
+*.test
+
+# OS specific
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Environment variables
+.env

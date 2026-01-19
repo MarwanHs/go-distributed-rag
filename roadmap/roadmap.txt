@@ -1,0 +1,15 @@
+[x] Step 1: Setup Infrastructure (Docker Compose with Kafka, Redis, Qdrant).
+
+[x] Step 2: Basic API (Upload endpoint, Redis status tracking, Dummy workers).
+
+[ ] Step 3: The Kafka Bridge. Replace the internal Go channels with real Kafka Producers and Consumers. (This ensures NFR-03 Durability).
+
+[ ] Step 4: The Logic (The "R" in RAG). Implement real PDF parsing and chunking.
+
+[ ] Step 5: The Brains. Integrate an Embedding Model (OpenAI or Local) to create vectors.
+
+[ ] Step 6: The Storage. Save those vectors to Qdrant.
+
+[ ] Step 7: The Search. Create the query endpoint.
+
+[ ] Step 8: Kubernetes. Move from Docker Compose to K8s manifests.

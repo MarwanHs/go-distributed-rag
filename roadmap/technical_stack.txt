@@ -1,0 +1,5 @@
+ID,Requirement,Implementation,Status
+NFR-01,Asynchronous Processing,The API must not block while the PDF is being processed.,✅ Done (Goroutines/Channels)
+NFR-02,Scalability,We must be able to add more workers if load increases.,"🚧 In Progress (Workers exist, but need Kafka)"
+NFR-03,Durability,"If the server crashes, we shouldn't lose the uploaded jobs.",⬜ Critical Todo (Need Kafka)
+NFR-04,Observability,We need logs to trace a request from Upload -> Processing -> Finish.,✅ Done (slog)

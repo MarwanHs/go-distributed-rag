@@ -1,0 +1,8 @@
+ID,Feature,Description,Status
+FR-01,PDF Upload,User sends a PDF file via API. Server accepts it and returns a tracking ID.,✅ Done
+FR-02,Job Tracking,"User can poll a status endpoint to see if their PDF is ""Pending"", ""Processing"", or ""Completed"".",✅ Done (Redis)
+FR-03,Text Extraction,The system must read the raw text from the PDF file.,⬜ Todo
+FR-04,Vectorization,The system must split text into chunks and convert them into vectors (embeddings).,⬜ Todo
+FR-05,Indexing,Vectors must be stored in Qdrant for fast retrieval.,⬜ Todo
+FR-06,Search API,User sends a text query; system returns relevant text snippets from uploaded PDFs.,⬜ Todo
+FR-07,LLM Answer,(Optional) System uses the snippets to generate a human-like answer using an LLM.,⬜ Todo
