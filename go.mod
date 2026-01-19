@@ -1,4 +1,4 @@
-module github.com/MarwanHs/my-rag-app
+module github.com/MarwanHs/go-distributed-rag
 
 go 1.25.5
 
@@ -15,6 +15,7 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/pierrec/lz4/v4 v4.1.15 // indirect
 	github.com/qdrant/go-client v1.16.2 // indirect
+	github.com/redis/go-redis/v9 v9.17.2
 	github.com/segmentio/kafka-go v0.4.50 // indirect
 	github.com/tmc/langchaingo v0.1.14 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
@@ -27,5 +28,4 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20251111163417-95abcf5c77ba // indirect
 	google.golang.org/grpc v1.76.0 // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
-	github.com/redis/go-redis/v9 v9.17.2
 )
