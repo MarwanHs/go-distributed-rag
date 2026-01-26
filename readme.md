@@ -49,14 +49,38 @@ From the project root, start the API server.
     go run src/gateway/cmd/api/main.go
 
 ### Step 4: Test the Ingestion Pipeline
-Upload the `test.pdf` from the project root to verify the flow.
+Upload the test.pdf from the project root to verify the flow.
 
     curl -X POST http://localhost:8080/upload -F "file=@test.pdf"
 
 **Expected Output:**
-```json
 {
   "job_id": "job-173981...",
   "status": "Pending",
   "message": "File uploaded successfully"
 }
+
+---
+
+## Troubleshooting
+
+**Kafka Unknown Topic Error:**
+If you get an error saying the topic does not exist, ensure you ran the command in Step 2. If the error persists, wait 10 seconds for Kafka metadata to sync and try the curl again.
+
+**Terraform Cleanup:**
+To wipe the environment and start fresh:
+    
+    terraform destroy -auto-approve
+
+---
+
+## Roadmap
+
+* [x] **Phase 1:** Core Ingestion API (Go) with Kafka Producer & Redis State.
+* [x] **Phase 1.5:** Infrastructure as Code (Terraform) & gRPC Contract.
+* [ ] **Phase 2:** Python Worker (Kafka Consumer + PDF Text Extraction).
+* [ ] **Phase 3:** Embedding Generation & Qdrant Storage.
+* [ ] **Phase 4:** Retrieval & Chat Endpoint (Ollama Integration).
+
+## License
+MIT
