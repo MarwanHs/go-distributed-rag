@@ -14,9 +14,9 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	pb "github.com/MarwanHs/go-distributed-rag/internal/proto/rag/v1"
+	pb "github.com/MarwanHs/go-distributed-rag/src/gateway/internal/proto/rag/v1"
 
-	"github.com/MarwanHs/go-distributed-rag/internal/handlers"
+	"github.com/MarwanHs/go-distributed-rag/src/gateway/internal/handlers"
 )
 
 func main() {

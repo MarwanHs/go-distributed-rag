@@ -15,7 +15,7 @@ import (
 	"github.com/redis/go-redis/v9"
 	"github.com/segmentio/kafka-go"
 
-	"github.com/MarwanHs/go-distributed-rag/internal/job" // Import your job package
+	"github.com/MarwanHs/go-distributed-rag/src/gateway/internal/job"
 )
 
 type DocumentHandler struct {

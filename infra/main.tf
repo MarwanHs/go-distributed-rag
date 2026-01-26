@@ -66,7 +66,7 @@ resource "docker_container" "kafka" {
     internal = 9092
     external = 9092
   }
-  
+
   env = [
     "KAFKA_CFG_NODE_ID=0",
     "KAFKA_CFG_PROCESS_ROLES=controller,broker",
