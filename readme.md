@@ -32,7 +32,7 @@ Start the Kafka broker and the Go API server using Docker Compose.
 
     docker-compose up -d --build
 
-### Step 2: Initialize the Kafka Topic
+### Step 2: Initialize the Kafka Topic - ***skip for now, resolved 
 Wait about 10 seconds for Kafka to fully boot, then run this **one-time command** to create the required topic.
 *(Note: We run this manually to avoid complex initialization scripts during development.)*
 

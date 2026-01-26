@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package rag.v1;
+
+option go_package = "gateway/internal/proto/rag/v1";
+
+service RagService {
+  rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse);
+
+  rpc InspectFile(InspectFileRequest) returns (InspectFileResponse);
+}
+
+message HealthCheckRequest {}
+
+message HealthCheckResponse {
+  enum ServingStatus {
+    SERVING_STATUS_UNSPECIFIED = 0;
+    SERVING_STATUS_SERVING = 1;
+    SERVING_STATUS_NOT_SERVING = 2;
+    SERVING_STATUS_DEGRADED = 3;
+  }
+  ServingStatus status = 1;
+}
+
+message InspectFileRequest {
+  string filename = 1;
+  string file_type = 2;
+  bytes header_bytes = 3;
+}
+
+message InspectFileResponse {
+  bool valid = 1;
+  string description = 2;
+}

@@ -1,0 +1,10 @@
+# run from project root
+
+protoc --proto_path=proto \
+  --plugin=protoc-gen-go=/Users/marwan/go/bin/protoc-gen-go \
+  --plugin=protoc-gen-go-grpc=/Users/marwan/go/bin/protoc-gen-go-grpc \
+  --go_out=src/gateway/internal/proto \
+  --go_opt=paths=source_relative \
+  --go-grpc_out=src/gateway/internal/proto \
+  --go-grpc_opt=paths=source_relative \
+  rag/v1/rag.proto
